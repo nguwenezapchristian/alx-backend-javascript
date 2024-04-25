@@ -8,7 +8,7 @@ a blueprint for other classes to inherit from.
 export default class Building {
     constructor(sqft) {
         if (new.target === Building) {
-            throw new TypeError('Class Building cannot be instantiated directly.');
+            throw new Error('Class Building cannot be instantiated directly.');
         }
         if (typeof sqft !== 'number') {
             throw new TypeError('Sqft must be a number');
