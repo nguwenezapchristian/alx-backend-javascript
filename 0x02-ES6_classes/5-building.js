@@ -7,8 +7,8 @@ a blueprint for other classes to inherit from.
 */
 export default class Building {
     constructor(sqft) {
-        if (new.target === Building) {
-            throw new Error('Class Building cannot be instantiated directly.');
+        if (this.constructor !== Building && this.evacuationWarningMessage === undefined) {
+            throw new Error('Class extending Building must override evacuationWarningMessage');
         }
         if (typeof sqft !== 'number') {
             throw new TypeError('Sqft must be a number');
@@ -18,9 +18,5 @@ export default class Building {
 
     get sqft() {
         return this._sqft;
-    }
-
-    evacuationWarningMessage() {
-        throw new Error('Class extending Building must override evacuationWarningMessage');
     }
 }
