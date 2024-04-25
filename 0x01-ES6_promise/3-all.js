@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-import { uploadPhoto, createUser } from './utils.js';
+import { uploadPhoto, createUser } from './utils';
 
 export default function handleProfileSignup() {
   return Promise
