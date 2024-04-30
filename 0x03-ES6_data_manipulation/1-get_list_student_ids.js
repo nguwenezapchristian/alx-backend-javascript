@@ -1,6 +1,4 @@
-// eslint-disable
-import getListStudents from "./0-get_list_students";
-
+/* eslint-disable */
 export default function getListStudentIds(arr) {
     if (!Array.isArray(arr)) {
         return [];
