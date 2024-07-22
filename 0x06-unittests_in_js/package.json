@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "mocha 0-calcul.test.js"
+    "test": "mocha *.test.js"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +14,8 @@
     "mocha": "^10.7.0",
     "request": "^2.88.2",
     "sinon": "^18.0.0"
+  },
+  "dependencies": {
+    "@sinonjs/referee-sinon": "^12.0.0"
   }
 }
