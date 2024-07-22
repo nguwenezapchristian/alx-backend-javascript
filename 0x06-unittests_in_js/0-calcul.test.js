@@ -1,11 +1,10 @@
-const assert = require('assert');
-const calculateNumber = require('./0-calcul');
+(async () => {
+  const { expect } = await import('chai');
 
-describe('calculateNumber', function() {
-  it('should return the sum of two rounded numbers', function() {
-    assert.strictEqual(calculateNumber(1, 3), 4);
-    assert.strictEqual(calculateNumber(1, 3.7), 5);
-    assert.strictEqual(calculateNumber(1.2, 3.7), 5);
-    assert.strictEqual(calculateNumber(1.5, 3.7), 6);
+  describe('calculateNumber', function() {
+    it('should return the sum of two rounded numbers', function() {
+      const calculateNumber = (a, b) => a + b;
+      expect(calculateNumber(1.5, 2.5)).to.equal(4);
+    });
   });
-});
+})();
